@@ -42,7 +42,7 @@ const menu_data = [
     mega_menu: false,
     has_dropdown: true,
     title: "Explore",
-    link: "https://app.sat20.org/#/explorer",
+    link: "https://mainnet.sat20.org/browser/app",
     active: "",
     
   },
