@@ -53,7 +53,7 @@ const footer_content = {
       //     icon: "fab fa-facebook-f", 
       //   },
         {
-          link: "http://x.com/sat20market",
+          link: "http://x.com/Sat20Nexus",
           target: "_blank",
           icon: "fab fa-twitter", 
         },
