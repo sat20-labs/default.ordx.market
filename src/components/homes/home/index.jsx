@@ -23,7 +23,7 @@ const HomeTwo = () => {
     
       <HeroArea />
       <AboutArea />
-      <CtaArea /> 
+{/*       <CtaArea />  */}
       <PaymentMethodArea />
       <TeamArea bg_style={true} />
       {/* <ServiceArea /> */}
