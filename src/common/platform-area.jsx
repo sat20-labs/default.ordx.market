@@ -1,58 +1,37 @@
 import Image from 'next/image';
 import React, {useEffect, useState} from 'react';
+import { useLanguage } from "../components/context/LanguageContext";
 
 import bg_shape from "../../public/assets/img/platform/p-bg.png";
 import platform_img from "../../public/assets/img/payment/platform-1.png"; 
-
-const platform_content ={
-    sub_title: "What we offer",
-    title: "Our Platform",
-    description: <>Explore how Avalance can help you toassess security controls continuously.</>,
-
-}
-const { sub_title, title, description }  = platform_content
 
 // plat form data 
 const platform_data = [
     {
         id: 1,
         cls: "one", 
-        count: "01",
-        title: "Firewall & VPN",
-        sub_title: "Live Security",
-        des: <>Blocks infected website tracking programs and annoying.</>
-        
+        count: "01"
     },
     {
         id: 2,
         cls: "two", 
-        count: "02",
-        title: "Hack Protection",
-        sub_title: "Hack Protection",
-        des: <>Blocks infected website tracking programs and annoying.</>,
-        
+        count: "02"
     },
     {
         id: 3,
         cls: "three", 
-        count: "03",
-        title: "Live Security",
-        sub_title: "Live Security",
-        des: <>Blocks infected website tracking programs and annoying.</>,
-        
+        count: "03"
     },
     {
         id: 4,
         cls: "four", 
-        count: "04",
-        title: "Online Support",
-        sub_title: "Online Support",
-        des: <>Blocks infected website tracking programs and annoying.</>,
-        
+        count: "04"
     },
 ]
 
 const PlatformArea = ({style_carrer}) => {
+    const { locale } = useLanguage();
+    const { sub_title, title, description, items } = locale.platform;
 
     const [active, setActive] = useState(3);
     const handleToggle = (id) => {
@@ -119,14 +98,14 @@ const PlatformArea = ({style_carrer}) => {
                                     <div className="tp-panel-item">
                                         <div className="tp-panel-content">
                                         <span>{item.count}.</span>
-                                        <h4 className={`tp-panel-title child-${item.cls}`}> {item.sub_title}</h4>
+                                        <h4 className={`tp-panel-title child-${item.cls}`}> {items[i].sub_title}</h4>
                                         </div>
                                     </div>
                                     <div className="tp-panel-item-2">
                                         <div className="tp-panel-content-2">
                                         <span>{item.count}.</span>
-                                        <h4 className="tp-panel-title-2">{item.title}</h4>
-                                        <p>{item.des}</p>
+                                        <h4 className="tp-panel-title-2">{items[i].title}</h4>
+                                        <p>{items[i].des}</p>
                                         </div>
                                     </div>
                                 </div>

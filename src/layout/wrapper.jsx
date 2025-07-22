@@ -4,7 +4,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 // middleware
 gsap.registerPlugin(ScrollTrigger);
 // internal
-import ScrollToTop from "../hooks/scroll-to-top";
+// import ScrollToTop from "../hooks/scroll-to-top";
 import { animationCreate } from "../utils/utils";
 
 const Wrapper = ({ children }) => {
@@ -18,7 +18,7 @@ const Wrapper = ({ children }) => {
   return (
     <>
       {children}
-      <ScrollToTop/>
+      {/* <ScrollToTop/> */}
     </>
   );
 };

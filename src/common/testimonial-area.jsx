@@ -3,13 +3,43 @@ import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import { Navigation, Scrollbar } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useLanguage } from "../components/context/LanguageContext";
 
 const testimonial_content = {
    bg_img: "/assets/img/testimonial/testi-bg-5-1.jpg",
-   sub_title: "CLIENTS & PROJECTS",
-   title: <>About Customer <span>Stories</span></>,
+   sub_title: {
+      en: "CLIENTS & PROJECTS",
+      zh: "客户与项目"
+   },
+   title: {
+      en: <>About Customer <span>Stories</span></>,
+      zh: <>关于客户<span>故事</span></>
+   },
 }
 const { bg_img, sub_title, title } = testimonial_content
+
+const testimonials = [
+   {
+      name: {
+         en: "Alice",
+         zh: "爱丽丝"
+      },
+      content: {
+         en: "This platform is amazing! I can trade Satoshi assets easily.",
+         zh: "这个平台太棒了！我可以轻松交易聪资产。"
+      }
+   },
+   {
+      name: {
+         en: "Bob",
+         zh: "鲍勃"
+      },
+      content: {
+         en: "The launch pool feature is very convenient.",
+         zh: "发射池功能非常方便。"
+      }
+   }
+];
 
 // setting 
 const setting = {
@@ -45,6 +75,7 @@ const setting = {
 
 const TestimonialArea = () => {
 
+   const { lang } = useLanguage();
    const [isDragged, setIsDragged] = useState(false);
 
    const handleSlideChange = () => {
@@ -64,8 +95,8 @@ const TestimonialArea = () => {
                <div className="row align-items-end tp-testimonial-five-section-space">
                   <div className="col-md-8">
                      <div className="tp-testimonial-five-section-box">
-                        <span className="tp-section-subtitle-5">{sub_title}</span>
-                        <h3 className="tp-section-title-5">{title}</h3>
+                        <span className="tp-section-subtitle-5">{sub_title[lang]}</span>
+                        <h3 className="tp-section-title-5">{title[lang]}</h3>
                      </div>
                   </div>
                   <div className="col-md-4">
@@ -120,6 +151,21 @@ const TestimonialArea = () => {
                </div>
             </div>
          </div>
+         <section className="py-16 bg-zinc-900 text-white">
+            <div className="container mx-auto px-4">
+               <h2 className="text-3xl font-bold mb-8 text-center">
+                  {lang === "zh" ? "用户评价" : "Testimonials"}
+               </h2>
+               <div className="grid md:grid-cols-2 gap-8">
+                  {testimonials.map((item, idx) => (
+                     <div key={idx} className="bg-zinc-800 rounded-xl p-6 shadow">
+                        <div className="text-lg mb-4">{item.content[lang]}</div>
+                        <div className="font-semibold text-blue-400">{item.name[lang]}</div>
+                     </div>
+                  ))}
+               </div>
+            </div>
+         </section>
       </>
    );
 };

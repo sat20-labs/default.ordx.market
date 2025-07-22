@@ -1,41 +1,20 @@
 import React from 'react';
 import Count from './count';
-// fun fact data 
-const fun_fact_data = [
-    {
-        id: 1, 
-        cls: "1",
-        count: 23,
-        simble: "+",
-        description: <>Years <br /> Of Experience</>
-    },
-    {
-        id: 2, 
-        cls: "2",
-        count: 300,
-        simble: "%",
-        description: <>Year on <br /> year Growth</>
-    },
-    {
-        id: 3, 
-        cls: "3",
-        count: 12,
-        simble: "+",
-        description: <>Countries <br /> Of Operation</>
-    },
-
-]
+import { useLanguage } from "../components/context/LanguageContext";
 
 const CountArea = () => {
+    const { locale } = useLanguage();
+    const { items } = locale.countArea;
+
     return (
       <>
-        {fun_fact_data.map((item, i) => (
+        {items.map((item, i) => (
           <div
             key={i}
             className="col-xl-4 col-lg-4 col-md-4 mb-60 tp-counter-br"
           >
             <div
-              className={`tp-fun-fact-item tp-fun-fact-space-${item.cls} d-flex align-items-center`}
+              className={`tp-fun-fact-item tp-fun-fact-space-${i+1} d-flex align-items-center`}
             >
               <h4>
                 <span
