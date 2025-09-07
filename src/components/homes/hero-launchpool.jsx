@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const HeroHomeLaunch = () => {
     const { locale } = useLanguage();
-    
+
     return (
         <>
             <section className="relative w-full py-16 overflow-hidden bg-no-repeat bg-[length:99%_auto] sm:bg-top sm:bg-contain" style={{ backgroundImage: "url(/assets/img/bg-section.jpg)" }}>
@@ -42,13 +42,13 @@ const HeroHomeLaunch = () => {
                                     </div>
                                 </div>
                                 <div className="flex space-x-4">
-                                    <a href="https://satsnet.test.ordx.market/launchpool/" className="px-1 sm:px-6 py-2 sm:py-3 w-36 sm:w-48 items-center bg-gradient-to-r opacity-90 hover:opacity-100 from-sky-600 to-fuchsia-600 text-white font-medium rounded-lg hover:scale-105 shadow-xl shadow-sky-600/30 hover:shadow-sky-500/50 transition duration-700">
+                                    <a href="https://satsnet.ordx.market/launchpool/" className="px-1 sm:px-6 py-2 sm:py-3 w-36 sm:w-48 items-center bg-gradient-to-r opacity-90 hover:opacity-100 from-sky-600 to-fuchsia-600 text-white font-medium rounded-lg hover:scale-105 shadow-xl shadow-sky-600/30 hover:shadow-sky-500/50 transition duration-700">
                                         <span className="flex justify-center items-center mt-2 sm:mt-0 text-sm sm:text-base">
                                             <Icon icon="lucide:rocket" className="text-white w-5 h-5 mr-1 sm:mr-2" />
                                             {locale.popupBtn || "JOIN POOL"}
                                         </span>
                                     </a>
-                                    <a href="https://satsnet.test.ordx.market/" className="px-1 sm:px-6 py-3 w-36 sm:w-48 bg-gray-900 text-white font-medium border border-gray-800 rounded-lg hover:scale-105 shadow-xl shadow-sky-600/15 hover:shadow-sky-500/50 transition duration-700">
+                                    <a href="https://satsnet.ordx.market/" className="px-1 sm:px-6 py-3 w-36 sm:w-48 bg-gray-900 text-white font-medium border border-gray-800 rounded-lg hover:scale-105 shadow-xl shadow-sky-600/15 hover:shadow-sky-500/50 transition duration-700">
                                         <span className="flex justify-center items-center mt-1 sm:mt-0 text-sm sm:text-base">
                                             <Icon icon="lucide:arrow-left-right" className="text-white w-5 h-5 mr-1 sm:mr-2" />
                                             {locale.transcend.satswap}

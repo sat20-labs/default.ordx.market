@@ -21,7 +21,7 @@ const PartnerArea = () => {
                     </div>
                     <div className="flex flex-wrap -mx-4">
                         {partner_data.map((item, i) =>
-                            <div key={i} className="w-full md:w-1/2 xl:w-1/4 px-4 mb-8 hover:scale-105 transition-transform duration-300 ease-in-out">
+                            <div key={i} className="w-full md:w-1/2 xl:w-1/5 px-4 mb-8 hover:scale-105 transition-transform duration-300 ease-in-out">
                                 <div className="h-full  backdrop-blur-md flex flex-col items-center justify-between bg-gradient-to-tr from-gray-800/50 to-black/50 rounded-xl shadow-xl hover:shadow-sky-600/50 border-2 border-zinc-700/50 hover:border-sky-600 p-6 text-center z-10">
                                     <div className="relative flex items-center justify-center mb-2">
                                         <Image src={item.img} alt="partner" className="w-16 h-16 " />                                        

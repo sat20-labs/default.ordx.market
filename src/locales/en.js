@@ -4,9 +4,9 @@ const en = {
     subtitle: "Protocol & SatoshiNet",
   },
   assets_hot: {
-    title: "MarketPlace Trending Picks",
-    subtitle: "SAT20Market Hot Asset Trading Platform",
-    desc: "SAT20Market is a professional platform designed for the Bitcoin ecosystem(Layer 1) and the SAT20 protocol community, offering integrated services for inscription, trading, and asset management of native BTC digital assets such as FT、SFT、DID、 and Rare Sats.",
+    title: "Hot Asset Recommendations",
+    subtitle: "SATSWAP Market Popular Asset Trading Platform",
+    desc: "SATSWAP Market is a professional platform for the Bitcoin ecosystem, integrating inscription, trading, and asset management. The platform adopts a dual-layer market architecture of L1+L2. SATSWAP (L2 DEX) offers efficient, low-fee Swap, limit orders, and Launchpool, suitable for high-frequency and hot trading; the L1 DEX is based on the Bitcoin mainnet, supporting the issuance and circulation of assets such as Ordx, DID, RareSats.",
     pearl_title: "The Oriental Pearl",
     pearl_subtitle: "Pearl is the first asset launched on the SAT20 protocol, serving as a governance token for the community, enabling participation in SatoshiNet node staking and mining.",
     rarepizza_title: "Rare Pizza",
@@ -37,12 +37,12 @@ const en = {
   },
   satswap: {
     title: "SATSWAP (L2 DEX)",
-    desc: "Layer 2 decentralized exchange supporting SAT20 asset trading.",
+    desc: "Layer 2 decentralized exchange supporting limit orders and AMM trading for ORDX and Runes assets.",
     btn: "Enter"
   },
   ordx: {
     title: "ORDX Market (L1 DEX)",
-    desc: "Layer 1 native Bitcoin DEX supporting SAT20 assets.",
+    desc: "Layer 1 Bitcoin-native DEX supporting ORDX asset minting and trading, as well as DID and Rare Sats asset minting and trading.",
     btn: "Enter"
   },
   launchpool: {

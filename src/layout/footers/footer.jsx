@@ -42,7 +42,7 @@ const footer_content = {
     ],
     social_links : [
         {
-          link: "http://x.com/Sat20Nexus",
+          link: "http://x.com/SATSWAPMarket",
           target: "_blank",
           icon: "line-md:twitter-x-alt", 
         },

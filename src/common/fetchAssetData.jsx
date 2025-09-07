@@ -28,4 +28,6 @@ const fetchAssetData = async (ticker) => {
   }
 };
 
+//https://apiprd.ordx.market/stp/mainnet/info/contract/bc1qmgactfmdfympq5tqld7rc53y4dphvdyqnmtuuv9jwgpn7hqwr2kss26dls_ordx:f:ordxsat_amm.tc
+
 export default fetchAssetData;

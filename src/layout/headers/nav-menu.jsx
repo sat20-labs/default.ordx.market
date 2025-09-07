@@ -17,7 +17,7 @@ const NavMenu = () => {
             >
               {locale.menu[menu_item.key]}
             </Link>
-            {/* 如果需要下拉菜单，可以取消注释下方代码
+            {/* 如果需要下拉菜单，可以取消注释下方代码 */}
             {menu_item.has_dropdown && (
               <ul className="absolute left-0 top-full mt-2 py-2 bg-zinc-800 rounded-lg shadow-lg min-w-[200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                 {menu_item.sub_menus.map((sub_menu, i) => (
@@ -31,7 +31,7 @@ const NavMenu = () => {
                   </li>
                 ))}
               </ul>
-            )} */}
+            )}
           </li>
         ))}
       </ul>

@@ -7,7 +7,7 @@ import PartnerArea from "./partner-area";
 import HomeAnimation from "./transcend-area";
 import Sat20Wallet from "./wallet-area";
 import HeroSection from "./hero-section";
-import  HeroHomeLaunch  from "./hero-launchpool";
+import HeroHomeLaunch from "./hero-launchpool";
 import HotAssets from "./hot-assets";
 
 const HomeOne = () => {
@@ -17,20 +17,22 @@ const HomeOne = () => {
       {/* 使用 Tailwind CSS 替换传统类名 */}
       <div className="text-white w-full">
         <div className="relative">
-          <main className="w-full overflow-hidden"> 
-            <HeroHomeLaunch />
-            <HotAssets />  
-            {/* <HeroSection /> */}
+          <main className="w-full overflow-hidden">
+            <HotAssets />
             <Sat20Wallet />
-                    
-            <HomeAnimation />          
+            <HeroHomeLaunch />
+
+            {/* <HeroSection /> */}
+
+
+            <HomeAnimation />
             {/* <CommunitiesArea bg_style={true} theme="dark" /> */}
-           
-            <PartnerArea/>
-            <FaqArea/>  
+
+            <PartnerArea />
+            <FaqArea />
 
           </main>
-          <FooterTwo/>
+          <FooterTwo />
         </div>
       </div>
     </>

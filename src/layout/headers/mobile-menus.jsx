@@ -24,21 +24,21 @@ const MobileMenus = () => {
         <ul className="space-y-1">
           {menu_data.map((menu, i) => (
             <React.Fragment key={i}>
-              <Link href={menu.link}>
+              {/* <Link href={menu.link}>
                 <li className="relative border-b border-zinc-800 py-4 flex items-center justify-between cursor-pointer hover:bg-gray-800 transition">
                   <span className="block text-zinc-400 hover:text-purple-400 transition-colors text-base font-medium">
                     {locale.menu[menu.key]}
                   </span>
                   <Icon icon="lucide:chevrons-right" className="inline-block text-zinc-400 mr-2" />
                 </li>
-              </Link>
+              </Link> */}
            
-              {/* {menu.has_dropdown ? (
+              {menu.has_dropdown ? (
                 <li className="relative border-b border-zinc-800 pb-4">
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between"  onClick={() => openMobileMenu(menu.title)}>
                     <Link 
                       href={menu.link}
-                      className="block text-zinc-400 hover:text-green-400 transition-colors text-base font-medium"
+                      className="block text-zinc-200 hover:text-green-400 transition-colors text-base font-medium"
                     >
                       
                       {locale.menu[menu.key]}
@@ -64,7 +64,7 @@ const MobileMenus = () => {
                       <li key={i}>
                         <Link 
                           href={sub.link}
-                          className="block py-1 text-gray-300 hover:text-green-400 transition-colors text-sm"
+                          className="block py-1 text-zinc-400 hover:text-green-400 transition-colors text-sm"
                         >
                           {sub.title}
                         </Link>
@@ -73,15 +73,17 @@ const MobileMenus = () => {
                   </ul>
                 </li>
               ) : (
-                <li>
-                  <Link 
-                    href={menu.link}
-                    className="block py-1 text-white hover:text-green-400 transition-colors text-base font-medium"
-                  >
+                <Link 
+                href={menu.link}
+                className="block py-1 text-zinc-200 hover:text-green-400 transition-colors text-base font-medium"
+              >
+                <li className="relative border-b border-zinc-800 py-4 flex items-center justify-between cursor-pointer hover:bg-gray-800 transition">
+                 
                     {locale.menu[menu.key]}
-                  </Link>
+                 
                 </li>
-              )} */}
+                </Link>
+              )}
             </React.Fragment>
           ))}
         </ul>
