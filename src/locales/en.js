@@ -66,7 +66,7 @@ const en = {
   faq: {
     title: "Frequently Asked Questions",
     sub_title: "Support",
-    description: "Explore our FAQs to find answers to common questions about SAT20Market and its features.",
+    description: "Explorer our FAQs to find answers to common questions about SAT20Market and its features.",
     // ...add more as needed
   },
   team: {
@@ -131,7 +131,7 @@ const en = {
     marketplace: "Marketplace",
     launchpool: "LaunchPool",
     inscribe: "Inscribe",
-    explore: "Explore",
+    explorer: "Explorer",
     economic: "Economic",
     myAssets: "My Assets"
   },
@@ -143,7 +143,7 @@ const en = {
   platform: {
     sub_title: "What we offer",
     title: "Our Platform",
-    description: "Explore how Avalance can help you to assess security controls continuously.",
+    description: "Explorer how Avalance can help you to assess security controls continuously.",
     items: [
       {
         title: "Firewall & VPN",

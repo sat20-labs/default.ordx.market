@@ -132,7 +132,7 @@ const zh = {
     marketplace: "市场",
     launchpool: "发射池",
     inscribe: "铭刻",
-    explore: "浏览器",
+    explorer: "浏览器",
     economic: "经济模型",
     myAssets: "我的资产"
   },

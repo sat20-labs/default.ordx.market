@@ -5,7 +5,7 @@ const menu_data = [
   { id: 4, key: "launchpool", link: "https://satsnet.ordx.market/launchpool", mega_menu: false, has_dropdown: false, active: "" },
   { id: 5, key: "inscribe", link: "https://app.ordx.market/inscribe", mega_menu: false, has_dropdown: false, active: "" },
   {
-    id: 6, key: "explore",
+    id: 6, key: "explorer",
     link: "/",
     mega_menu: false,
     has_dropdown: true,
