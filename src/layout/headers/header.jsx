@@ -2,22 +2,22 @@ import useSticky from '@/src/hooks/use-sticky';
 import Offcanvus from '@/src/common/offcanvus';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import NavMenu from './nav-menu';
 import { useLanguage } from "../../components/context/LanguageContext";
-import black_logo from "../../../public/assets/img/logo/logo-black.png" 
+import black_logo from "../../../public/assets/img/logo/logo-black.png"
 
 const hero_content = {
-    login_btn: "Login",
-    sign_up_btn: "Connect",
-    logout_btn: "Logout",
+  login_btn: "Login",
+  sign_up_btn: "Connect",
+  logout_btn: "Logout",
 }
-const {login_btn, sign_up_btn, logout_btn}  = hero_content
+const { login_btn, sign_up_btn, logout_btn } = hero_content
 
 const HeaderOne = () => {
-  const {sticky} = useSticky()
+  const { sticky } = useSticky()
   const [sidebarOpen, setSidebarOpen] = useState(false)
-  const { lang, toggleLang } = useLanguage();
+  const { lang, setLang, toggleLang } = useLanguage();
 
   return (
     <>
@@ -28,39 +28,50 @@ const HeaderOne = () => {
               {/* Logo */}
               <div className="flex-shrink-0">
                 <Link className="block" href="/">
-                  <Image 
+                  <Image
                     className={`${sticky ? "hidden" : "block"}`}
-                    src={black_logo} 
-                    alt="Ordx Market" 
+                    src={black_logo}
+                    alt="Ordx Market"
                   />
-                  <Image 
+                  <Image
                     className={`${sticky ? "block" : "hidden"}`}
-                    src={black_logo} 
-                    alt="Ordx Market" 
+                    src={black_logo}
+                    alt="Ordx Market"
                   />
                 </Link>
               </div>
-              
+
               {/* Navigation - Desktop */}
               <div className="hidden lg:block flex-grow">
                 <nav className="flex justify-center">
                   <NavMenu />
                 </nav>
               </div>
-              
+
               {/* Right buttons */}
               <div className="flex items-center space-x-4">
-  
-                {/* Language Switch Button */}
-                <button
-                  onClick={toggleLang}
-                  className="inline-flex items-center px-3 py-2 rounded bg-fuchsia-600/80 text-white text-sm hover:bg-gray-600 transition"
-                  aria-label="Switch Language"
-                >
-                  {lang === "zh" ? "English" : "中文"}
-                </button>
+                {/* Language Segmented Switch */}
+                <div className="inline-flex items-center bg-zinc-800 rounded-md p-0.5">
+                  <button
+                    onClick={() => setLang('en')}
+                    className={`${lang === 'en' ? 'bg-orange-500 text-white' : 'text-zinc-300 hover:text-white'} px-3 py-1.5 rounded-md text-xs font-semibold transition-colors`}
+                    aria-pressed={lang === 'en'}
+                    aria-label="Switch to English"
+                  >
+                    EN
+                  </button>
+                  <button
+                    onClick={() => setLang('zh')}
+                    className={`${lang === 'zh' ? 'bg-orange-500 text-white' : 'text-zinc-300 hover:text-white'} px-3 py-1.5 rounded-md text-xs font-semibold transition-colors`}
+                    aria-pressed={lang === 'zh'}
+                    aria-label="切换到中文"
+                  >
+                    ZH
+                  </button>
+                </div>
+
                 {/* Mobile menu button */}
-                <button 
+                <button
                   className="lg:hidden text-white p-2"
                   onClick={() => setSidebarOpen(true)}
                 >
