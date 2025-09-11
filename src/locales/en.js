@@ -4,7 +4,7 @@ const en = {
     subtitle: "Protocol & SatoshiNet",
   },
   assets_hot: {
-    title: "Hot Asset Recommendations",
+    title: "SATSWAP Hot Picks",
     subtitle: "SATSWAP Market Popular Asset Trading Platform",
     desc: "SATSWAP Market is a professional platform for the Bitcoin ecosystem, integrating inscription, trading, and asset management. The platform adopts a dual-layer market architecture of L1+L2. SATSWAP (L2 DEX) offers efficient, low-fee Swap, limit orders, and Launchpool, suitable for high-frequency and hot trading; the L1 DEX is based on the Bitcoin mainnet, supporting the issuance and circulation of assets such as Ordx, DID, RareSats.",
     pearl_title: "The Oriental Pearl",
@@ -36,12 +36,12 @@ const en = {
     ]
   },
   satswap: {
-    title: "SATSWAP (L2 DEX)",
+    title: "L2 DEX",
     desc: "Layer 2 decentralized exchange supporting limit orders and AMM trading for ORDX and Runes assets.",
     btn: "Enter"
   },
   ordx: {
-    title: "ORDX Market (L1 DEX)",
+    title: "L1 DEX",
     desc: "Layer 1 Bitcoin-native DEX supporting ORDX asset minting and trading, as well as DID and Rare Sats asset minting and trading.",
     btn: "Enter"
   },

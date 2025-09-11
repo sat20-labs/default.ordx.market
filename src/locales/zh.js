@@ -4,7 +4,7 @@ const zh = {
     subtitle: "协议与聪网",
   },
   assets_hot: {
-    title: "热点资产推荐",
+    title: "SATSWAP热点推荐",
     subtitle: "SATSWAP Market 热门资产交易平台",
     desc: "SATSWAP Market 是面向比特币生态的专业平台，集铭刻、交易与资产管理于一体，平台采用 L1+L2 双层市场架构，SATSWAP（L2 DEX） 提供高效、低费率的 Swap、限价单和 Launchpool，适合高频与热点交易；L1 DEX 基于比特币主网，支持 Ordx、DID、RareSats 等类型资产的发行与流通。",
     pearl_subtitle: "Pearl 是 SAT20 协议首发资产，作为社区治理代币，可用于参与 SatoshiNet 节点质押与挖矿",
@@ -36,12 +36,12 @@ const zh = {
     ]
   },
   satswap: {
-    title: "SATSWAP（L2 DEX）",
+    title: "L2 DEX",
     desc: "Layer2 去中心化交易所，支持 ORDX, Runes 资产的限价交易，AMM交易。",
     btn: "进入"
   },
   ordx: {
-    title: "ORDX 市场（L1 DEX）",
+    title: "L1 DEX",
     desc: "Layer1 比特币原生 DEX，支持 ORDX 资产的铸造，交易， 支持DID ，稀有聪资产的铸造和交易。",
     btn: "进入"
   },
